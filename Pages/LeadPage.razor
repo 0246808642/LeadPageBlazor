@@ -1,0 +1,11 @@
+@using BlazorTall.Models
+@page "/"
+
+
+@code{
+    private List<Bolo> Bolos = new (){
+        new Bolo{ Nome = "Chocolate", Descricao = "O melhor bolo do mundo de chocolate", Imagem = ""},
+        new() { Nome = "Bolo de Morango", Descricao = "Leve e refrescante", Imagem = "" },
+        new() { Nome = "Bolo de Cenoura", Descricao = "Com cobertura de chocolate caseira", Imagem = "" }
+    };
+}

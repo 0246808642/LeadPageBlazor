@@ -1,4 +1,4 @@
-# 🎂 Lead Page – Bolos da Ana
+# 🎂 Lead Page – Bolos da Tia 
 
 Uma landing page moderna e interativa desenvolvida com **Blazor App Unificado (.NET 9)** e **TailwindCSS v3**, criada para uma boleira divulgar seus produtos e receber pedidos personalizados.  
 O projeto foi construído do zero com foco em design, responsividade e experiência de usuário.

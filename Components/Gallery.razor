@@ -1,0 +1,25 @@
+@using BlazorTall.Models
+
+<section id="bolos" class="py-16 px-6 bg-white">
+    <h3 class="text-3xl font-bold text-center text-pink-600 mb-8">Nossos Bolos</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        @foreach (var bolo in Bolos)
+        {
+            <div class="bg-pink-50 rounded-2xl shadow hover:shadow-lg transition p-4">
+                <img src="@bolo.Imagem" alt="@bolo.Nome" class="rounded-xl mb-3 w-full h-48 object-cover" />
+                <h4 class="text-xl font-semibold">@bolo.Nome</h4>
+                <p class="text-gray-600">@bolo.Descricao</p>
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    private List<Bolo> Bolos = new()
+    {
+        new() { Nome = "Bolo de Chocolate", Descricao = "Cremoso e irresistível 🍫", Imagem = "./css/imagens/bolo-chocolate.jpg" },
+        new() { Nome = "Bolo de Morango", Descricao = "Leve e refrescante 🍓", Imagem = "/css/imagens/bolo-morango.jpg" },
+        new() { Nome = "Bolo de Cenoura", Descricao = "Com cobertura de chocolate 🍰", Imagem = "/css/imagens/bolo-cenoura.jpg" }
+    };
+}

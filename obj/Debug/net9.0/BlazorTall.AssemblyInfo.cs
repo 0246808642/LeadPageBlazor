@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorTall")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b4c598a919e54899d66a4472ff58dfa62b12c12")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorTall")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorTall")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

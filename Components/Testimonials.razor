@@ -1,0 +1,26 @@
+@using LeadPageBlazor.Models
+
+<section id="depoimentos" class="py-16 px-6 bg-pink-50">
+    <h3 class="text-3xl font-bold text-center text-pink-600 mb-10">
+        O que dizem nossos clientes
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @foreach (var dep in Depoimentos)
+        {
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                <p class="italic text-gray-700 mb-4">"@dep.Mensagem"</p>
+                <h4 class="font-semibold text-pink-700">- @dep.Nome</h4>
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    private List<Depoimento> Depoimentos = new()
+    {
+        new() { Nome = "Clara S.", Mensagem = "O melhor bolo que já comi! Recomendo demais!" },
+        new() { Nome = "João P.", Mensagem = "Atendimento incrível e bolo maravilhoso." },
+        new() { Nome = "Marina L.", Mensagem = "Fez meu aniversário ainda mais doce!" }
+    };
+}

@@ -1,0 +1,38 @@
+@using BlazorTall.Models
+@using LeadPageBlazor.Models
+@using Microsoft.AspNetCore.Components.Forms
+
+<section id="contato" class="py-6 px-6 bg-white">
+    <h3 class="text-3xl font-bold text-center text-pink-600 mb-10">Peça seu Bolo</h3>
+
+    <div class="max-w-lg mx-auto bg-pink-50 rounded-2xl shadow p-8">
+        <EditForm Model="@pedido" OnInvalidSubmit="EnviarPedido">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="space-y-4">
+                <input type="text" @bind="pedido.Nome" placeholder="Seu nome"
+                    class="w-full p-3 rounded-xl border border-gray-300" />
+                <input type="email" @bind="pedido.Email" placeholder="Seu e-mail"
+                    class="w-full p-3 rounded-xl border border-gray-300" />
+                <textarea @bind="pedido.Message" placeholder="Descreva seu pedido..."
+                    class="w-full p-3 rounded-xl border border-gray-300 h-32"></textarea>
+                <button type="submit"
+                    class="bg-pink-600 text-white px-6 py-3 rounded-xl w-full hover:bg-pink-800 transition">Enviar
+                    Pedido</button>
+            </div>
+        </EditForm>
+        @if(enviado){
+            <p class="mt-6 text-center text-green-600 font-semibold">
+                Pedido enviado com sucesso! 🍰 Entraremos em contato em breve.
+            </p>
+        }
+    </div>
+</section>
+
+@code {
+    private Pedido pedido = new();
+    private bool enviado = false;
+
+    private void EnviarPedido() => enviado = true;
+}
